@@ -13,6 +13,10 @@ public class Rotacija : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.Rotate(Vector3.up * brzinaRotacije, Space.World);
+
+		//Time.deltaTime - vrijeme koje je proteklo od prošlog framea, kako bi brzina rotacije bila 
+		// nezavisna brzini izvođenja igre
+
+		this.transform.Rotate(Vector3.up * brzinaRotacije * Time.deltaTime, Space.World);
 	}
 }

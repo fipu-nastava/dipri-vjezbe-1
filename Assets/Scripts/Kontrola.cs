@@ -54,6 +54,10 @@ public class Kontrola : MonoBehaviour {
 	// Alternativa "Update"-u, koristi se za izračun fizičkih svojstava
 	void FixedUpdate ()
 	{
+		if (Input.GetKeyDown (KeyCode.R)) {
+			restartClick ();	
+		}
+
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
